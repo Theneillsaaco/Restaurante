@@ -1,0 +1,99 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Issac\\source\\repos\\Restaurante\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B683F39B-C918-42D9-9711-DBA89C60F72A}|Restaurante.Infrastructure\\Restaurante.Infrastructure.csproj|c:\\users\\issac\\source\\repos\\restaurante\\restaurante.infrastructure\\core\\baserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B683F39B-C918-42D9-9711-DBA89C60F72A}|Restaurante.Infrastructure\\Restaurante.Infrastructure.csproj|solutionrelative:restaurante.infrastructure\\core\\baserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B683F39B-C918-42D9-9711-DBA89C60F72A}|Restaurante.Infrastructure\\Restaurante.Infrastructure.csproj|c:\\users\\issac\\source\\repos\\restaurante\\restaurante.infrastructure\\context\\restaurantedbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B683F39B-C918-42D9-9711-DBA89C60F72A}|Restaurante.Infrastructure\\Restaurante.Infrastructure.csproj|solutionrelative:restaurante.infrastructure\\context\\restaurantedbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D38A7288-0D4A-4BAB-A507-D6BAAFB5D47D}|Restaurante.Domain\\Restaurante.Domain.csproj|c:\\users\\issac\\source\\repos\\restaurante\\restaurante.domain\\core\\interfaces\\ibaserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D38A7288-0D4A-4BAB-A507-D6BAAFB5D47D}|Restaurante.Domain\\Restaurante.Domain.csproj|solutionrelative:restaurante.domain\\core\\interfaces\\ibaserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 1219,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BaseRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Issac\\source\\repos\\Restaurante\\Restaurante.Infrastructure\\Core\\BaseRepository.cs",
+              "RelativeDocumentMoniker": "Restaurante.Infrastructure\\Core\\BaseRepository.cs",
+              "ToolTip": "C:\\Users\\Issac\\source\\repos\\Restaurante\\Restaurante.Infrastructure\\Core\\BaseRepository.cs",
+              "RelativeToolTip": "Restaurante.Infrastructure\\Core\\BaseRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-29T22:38:12.867Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "RestauranteDBContext.cs",
+              "DocumentMoniker": "C:\\Users\\Issac\\source\\repos\\Restaurante\\Restaurante.Infrastructure\\Context\\RestauranteDBContext.cs",
+              "RelativeDocumentMoniker": "Restaurante.Infrastructure\\Context\\RestauranteDBContext.cs",
+              "ToolTip": "C:\\Users\\Issac\\source\\repos\\Restaurante\\Restaurante.Infrastructure\\Context\\RestauranteDBContext.cs",
+              "RelativeToolTip": "Restaurante.Infrastructure\\Context\\RestauranteDBContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-29T22:30:07.941Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IBaseRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Issac\\source\\repos\\Restaurante\\Restaurante.Domain\\Core\\Interfaces\\IBaseRepository.cs",
+              "RelativeDocumentMoniker": "Restaurante.Domain\\Core\\Interfaces\\IBaseRepository.cs",
+              "ToolTip": "C:\\Users\\Issac\\source\\repos\\Restaurante\\Restaurante.Domain\\Core\\Interfaces\\IBaseRepository.cs",
+              "RelativeToolTip": "Restaurante.Domain\\Core\\Interfaces\\IBaseRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-29T01:59:28.551Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 429,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{f4e46f1e-cf83-40aa-b568-a627394bc994}"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 813,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
