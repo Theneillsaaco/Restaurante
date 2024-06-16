@@ -1,0 +1,16 @@
+C:\Users\Issac\source\repos\Restaurante\Restaurante.Infrastructure\bin\Debug\net8.0\Restaurante.Infrastructure.deps.json
+C:\Users\Issac\source\repos\Restaurante\Restaurante.Infrastructure\bin\Debug\net8.0\Restaurante.Infrastructure.dll
+C:\Users\Issac\source\repos\Restaurante\Restaurante.Infrastructure\bin\Debug\net8.0\Restaurante.Infrastructure.pdb
+C:\Users\Issac\source\repos\Restaurante\Restaurante.Infrastructure\bin\Debug\net8.0\Restaurante.Domain.dll
+C:\Users\Issac\source\repos\Restaurante\Restaurante.Infrastructure\bin\Debug\net8.0\Restaurante.Domain.pdb
+C:\Users\Issac\source\repos\Restaurante\Restaurante.Infrastructure\obj\Debug\net8.0\Restaurante.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\Issac\source\repos\Restaurante\Restaurante.Infrastructure\obj\Debug\net8.0\Restaurante.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Issac\source\repos\Restaurante\Restaurante.Infrastructure\obj\Debug\net8.0\Restaurante.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Issac\source\repos\Restaurante\Restaurante.Infrastructure\obj\Debug\net8.0\Restaurante.Infrastructure.AssemblyInfo.cs
+C:\Users\Issac\source\repos\Restaurante\Restaurante.Infrastructure\obj\Debug\net8.0\Restaurante.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Issac\source\repos\Restaurante\Restaurante.Infrastructure\obj\Debug\net8.0\Restaurante.Infrastructure.sourcelink.json
+C:\Users\Issac\source\repos\Restaurante\Restaurante.Infrastructure\obj\Debug\net8.0\Restaura.DEF06F61.Up2Date
+C:\Users\Issac\source\repos\Restaurante\Restaurante.Infrastructure\obj\Debug\net8.0\Restaurante.Infrastructure.dll
+C:\Users\Issac\source\repos\Restaurante\Restaurante.Infrastructure\obj\Debug\net8.0\refint\Restaurante.Infrastructure.dll
+C:\Users\Issac\source\repos\Restaurante\Restaurante.Infrastructure\obj\Debug\net8.0\Restaurante.Infrastructure.pdb
+C:\Users\Issac\source\repos\Restaurante\Restaurante.Infrastructure\obj\Debug\net8.0\ref\Restaurante.Infrastructure.dll
