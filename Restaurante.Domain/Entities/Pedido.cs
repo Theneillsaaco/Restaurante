@@ -6,9 +6,9 @@ public partial class Pedido
 {
     [Key]
     public int IdPedido { get; set; }
-
+    
     public int? IdCliente { get; set; }
-
+    
     public int? IdMesa { get; set; }
 
     public DateOnly? Fecha { get; set; }

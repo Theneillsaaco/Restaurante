@@ -6,8 +6,7 @@ public partial class Factura
 {
     [Key]
     public int IdFactura { get; set; }
-
-    [Key]
+    
     public int? IdPedido { get; set; }
 
     public decimal? Total { get; set; }

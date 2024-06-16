@@ -17,7 +17,5 @@ namespace Restaurante.Domain.Core.Interfaces
         Task Update(List<TEntity> entities);
 
         Task<bool> Exists(Expression<Func<TEntity, bool>> filter);
-
-        Task Delete(TEntity entity);
     }
 }

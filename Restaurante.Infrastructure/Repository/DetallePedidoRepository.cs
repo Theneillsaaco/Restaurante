@@ -30,7 +30,7 @@ public class DetallePedidoRepository : BaseRepository<DetallePedido>, IDetallePe
         if (entity is null)
             throw new ArgumentNullException("El Detalle del Pedido no puede ser null.");
 
-        if (!await base.Exists(cd => cd.IdPedido == entity.IdPedido))
+        if (await base.Exists(cd => cd.IdPedido == entity.IdPedido))
             throw new DetallePedidoException("El Detalle del Pedido ya existe");
 
         await base.Save(entity);
@@ -38,12 +38,12 @@ public class DetallePedidoRepository : BaseRepository<DetallePedido>, IDetallePe
     
     public async Task<List<DetallePedidoMenuModel>> GetDetallePedido()
     {
-        var detallePedido = _context.DetallePedidos
-            .Join(_context.Pedidos,
+        var detallePedido = _context.DetallePedido
+            .Join(_context.Pedido,
                 dep => dep.IdPedido,
                 ped => ped.IdPedido,
                 (dep, ped) => dep.ConvertDetallePedidoEntityToDetallePedidoMenuModel(ped))
-            .Join(_context.Menus,
+            .Join(_context.Menu,
                 dep => dep.IdPlato,
                 men => men.IdPlato,
                 (ped, men) => new DetallePedidoMenuModel()
@@ -57,14 +57,14 @@ public class DetallePedidoRepository : BaseRepository<DetallePedido>, IDetallePe
 
     public async Task<List<DetallePedidoMenuModel>> GetDetallePedidoByPedidoAndMenu(int idPedido, int idPlato)
     {
-        var detallePedido = _context.DetallePedidos
+        var detallePedido = _context.DetallePedido
             .Where(dep => dep.IdPedido == idPedido
                         && dep.IdPlato == idPlato)
-            .Join(_context.Pedidos,
+            .Join(_context.Pedido,
                 dep => dep.IdPedido,
                 ped => ped.IdPedido,
                 (dep, ped) => dep.ConvertDetallePedidoEntityToDetallePedidoMenuModel(ped))
-            .Join(_context.Menus,
+            .Join(_context.Menu,
                 dep => dep.IdPlato,
                 men => men.IdPlato,
                 (ped, men) => new DetallePedidoMenuModel()

@@ -6,11 +6,9 @@ public partial class DetallePedido
 {
     [Key]
     public int IdDetallePedido { get; set; }
-
-    [Key]
+    
     public int? IdPedido { get; set; }
-
-    [Key]
+    
     public int? IdPlato { get; set; }
 
     public int? Cantidad { get; set; }

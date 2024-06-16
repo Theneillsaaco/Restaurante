@@ -29,7 +29,7 @@ public class MenuRepository : BaseRepository<Menu>, IMenuRepository
         if (entity is null)
             throw new ArgumentNullException("El Menu no puede ser null.");
 
-        if (!await base.Exists(cd => cd.IdPlato == entity.IdPlato))
+        if (await base.Exists(cd => cd.IdPlato == entity.IdPlato))
             throw new MenuException("El Menu ya existe");
 
         await base.Save(entity);
@@ -37,7 +37,7 @@ public class MenuRepository : BaseRepository<Menu>, IMenuRepository
     
     public async Task<List<MenuModel>> GetMenus()
     {
-        var menu = _context.Menus
+        var menu = _context.Menu
             .Select(men => men.ConvertMenuEntityToMenuModel())
             .ToListAsync();
 

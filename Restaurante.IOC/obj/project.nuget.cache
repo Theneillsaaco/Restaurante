@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "eoOota5H+fdX//ObEbDHm0rv4qIkBxTqpYJjiBSDG/WeFl22zpHr3/Lj/5Muxj3SO0JfRoVPeSWSeZHau1M9UQ==",
+  "dgSpecHash": "kY7wp2Z9MRDOSqUEM0NyW9ZStQPqQ9t/DGFfr1um0/M5267HJwimBGkcskykQxOIJSnyNcXYDodsfIfUM0BeLw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Issac\\source\\repos\\Restaurante\\Restaurante.IOC\\Restaurante.IOC.csproj",
   "expectedPackageFiles": [
@@ -19,7 +19,7 @@
     "C:\\Users\\Issac\\.nuget\\packages\\microsoft.extensions.caching.memory\\8.0.0\\microsoft.extensions.caching.memory.8.0.0.nupkg.sha512",
     "C:\\Users\\Issac\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\8.0.0\\microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\Issac\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\8.0.0\\microsoft.extensions.dependencyinjection.8.0.0.nupkg.sha512",
-    "C:\\Users\\Issac\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\Issac\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.1\\microsoft.extensions.dependencyinjection.abstractions.8.0.1.nupkg.sha512",
     "C:\\Users\\Issac\\.nuget\\packages\\microsoft.extensions.logging\\8.0.0\\microsoft.extensions.logging.8.0.0.nupkg.sha512",
     "C:\\Users\\Issac\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.0\\microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\Issac\\.nuget\\packages\\microsoft.extensions.options\\8.0.0\\microsoft.extensions.options.8.0.0.nupkg.sha512",

@@ -12,19 +12,19 @@ public partial class RestauranteDBContext : DbContext
 
     #region"Entities"
 
-    public virtual DbSet<Cliente> Clientes { get; set; }
+    public virtual DbSet<Cliente> Cliente { get; set; }
 
-    public virtual DbSet<DetallePedido> DetallePedidos { get; set; }
+    public virtual DbSet<DetallePedido> DetallePedido { get; set; }
 
-    public virtual DbSet<Empleado> Empleados { get; set; }
+    public virtual DbSet<Empleado> Empleado { get; set; }
 
-    public virtual DbSet<Factura> Facturas { get; set; }
+    public virtual DbSet<Factura> Factura { get; set; }
 
-    public virtual DbSet<Menu> Menus { get; set; }
+    public virtual DbSet<Menu> Menu { get; set; }
 
-    public virtual DbSet<Mesa> Mesas { get; set; }
+    public virtual DbSet<Mesa> Mesa { get; set; }
 
-    public virtual DbSet<Pedido> Pedidos { get; set; }
+    public virtual DbSet<Pedido> Pedido { get; set; }
 
     #endregion
 }

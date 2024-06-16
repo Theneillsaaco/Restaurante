@@ -29,15 +29,42 @@ public class ClienteRepository : BaseRepository<Cliente>, IClienteRepository
         if (entity is null)
             throw new ArgumentNullException("El Cliente no puede ser null.");
         
-        if (!await base.Exists(cd => cd.IdCliente == entity.IdCliente))
+        if (await base.Exists(cd => cd.IdCliente == entity.IdCliente))
             throw new ClienteException("El Cliente ya Existe.");
+        
+        
+        await base.Save(entity);
+    }
+
+    public override async Task Update(Cliente entity)
+    {
+        ArgumentNullException.ThrowIfNull(entity, "El cliente no puede ser null.");
+        
+        if (entity is null)
+            throw new ArgumentNullException("El Cliente no puede ser null.");
+        
+        if (!await base.Exists(cd => cd.IdCliente != entity.IdCliente))
+            throw new ClienteException("El Cliente no Existe.");
 
         await base.Save(entity);
     }
 
-    public async Task<List<ClienteModel>>  GetClientes()
+    public override async Task Update(List<Cliente> entity)
     {
-        var cliente = _context.Clientes
+        ArgumentNullException.ThrowIfNull(entity, "El cliente no puede ser null.");
+        
+        if (entity is null)
+            throw new ArgumentNullException("El Cliente no puede ser null.");
+
+        if (!entity.Any())
+            throw new ClienteException("debe proporcionar por lo menos un cliente en la lista.");
+        
+        await base.Save(entity);
+    }
+
+    public async Task<List<ClienteModel>> GetClientes()
+    {
+        var cliente = _context.Cliente
             .Select(cli => cli.ConvertClienteEntityToClienteModel())
             .ToListAsync();
 

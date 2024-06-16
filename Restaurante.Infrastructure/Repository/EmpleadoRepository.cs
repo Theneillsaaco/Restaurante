@@ -29,7 +29,7 @@ public class EmpleadoRepository : BaseRepository<Empleado>, IEmpleadoRepository
         if (entity is null)
             throw new ArgumentNullException("El Empleado no puede ser null");
 
-        if (!await base.Exists(cd => cd.IdEmpleado == entity.IdEmpleado))
+        if (await base.Exists(cd => cd.IdEmpleado == entity.IdEmpleado))
             throw new EmpleadoException("El Empleado ya Exites");
 
         await base.Save(entity);
@@ -37,7 +37,7 @@ public class EmpleadoRepository : BaseRepository<Empleado>, IEmpleadoRepository
     
     public async Task<List<EmpleadoModel>> GetEmpleado()
     {
-        var empleado = _context.Empleados
+        var empleado = _context.Empleado
             .Select(emp => emp.ConvertEmpleadoEntityToEmpleadoModel())
             .ToListAsync();
 

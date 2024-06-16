@@ -18,8 +18,8 @@ public abstract class BaseRepository<TEntity> : IBaseRepository<TEntity> where T
 
     protected BaseRepository(RestauranteDBContext context)
     {
-        this._context = context;
-        this._entities = context.Set<TEntity>();
+        _context = context;
+        _entities = context.Set<TEntity>();
     }
 
     #endregion
@@ -36,33 +36,27 @@ public abstract class BaseRepository<TEntity> : IBaseRepository<TEntity> where T
 
     public virtual async Task Save(TEntity entity)
     {
-        this._entities.Add(entity);
+        _entities.Add(entity);
         await _context.SaveChangesAsync();
 
     }
 
     public virtual async Task Save(List<TEntity> entities)
     {
-        this._entities.AddRange(entities);
+        _entities.AddRange(entities);
         await _context.SaveChangesAsync();
     }
   
     public virtual async Task Update(TEntity entity)
     {
-        this._entities.Update(entity);
+        _entities.Update(entity);
         await _context.SaveChangesAsync();
     }
 
     public virtual async Task Update(List<TEntity> entities)
     {
-        this._entities.UpdateRange(entities);
+        _entities.UpdateRange(entities);
         await _context.SaveChangesAsync();
-    }
-
-    public virtual Task Delete(TEntity entity)
-    {
-        this._entities.Remove(entity);
-        return _context.SaveChangesAsync();
     }
 
     public virtual async Task<bool> Exists(Expression<Func<TEntity, bool>> filter)

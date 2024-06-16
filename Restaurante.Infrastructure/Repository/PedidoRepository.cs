@@ -29,7 +29,7 @@ public class PedidoRepository : BaseRepository<Pedido>, IPedidoRepository
         if (entity is null)
             throw new ArgumentNullException("El Pedido no puede ser null.");
 
-        if (!await base.Exists(cd => cd.IdPedido == entity.IdPedido))
+        if (await base.Exists(cd => cd.IdPedido == entity.IdPedido))
             throw new PedidoException("El Pedido ya existe");
 
         await base.Save(entity);
@@ -37,12 +37,12 @@ public class PedidoRepository : BaseRepository<Pedido>, IPedidoRepository
     
     public async Task<List<PedidoClienteMesaModel>> GetPedido()
     {
-        var pedido = _context.Pedidos
-            .Join(_context.Clientes,
+        var pedido = _context.Pedido
+            .Join(_context.Cliente,
                 ped => ped.IdCliente,
                 cli => cli.IdCliente,
                 (ped, cli) => ped.ConvertPedidoEntityToPedidoClienteMesaModel(cli))
-            .Join(_context.Mesas,
+            .Join(_context.Mesa,
                 ped => ped.IdMesa,
                 mesa => mesa.IdMesa,
                 (ped, mesa) => new PedidoClienteMesaModel
@@ -56,14 +56,14 @@ public class PedidoRepository : BaseRepository<Pedido>, IPedidoRepository
 
     public async Task<List<PedidoClienteMesaModel>> GetPedidoByClienteAndMesa(int idCliente, int idMesa)
     {
-        var pedido = _context.Pedidos
+        var pedido = _context.Pedido
             .Where(ped => ped.IdCliente == idCliente
                         && ped.IdMesa == idMesa)
-            .Join(_context.Clientes,
+            .Join(_context.Cliente,
                 ped => ped.IdCliente,
                 cli => cli.IdCliente,
                 (ped, cli) => ped.ConvertPedidoEntityToPedidoClienteMesaModel(cli))
-            .Join(_context.Mesas,
+            .Join(_context.Mesa,
                 ped => ped.IdMesa,
                 mesa => mesa.IdMesa,
                 (ped, mesa) => new PedidoClienteMesaModel

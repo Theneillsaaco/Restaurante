@@ -29,7 +29,7 @@ public class FacturaRepository : BaseRepository<Factura>, IFacturaRepository
         if (entity is null)
             throw new ArgumentNullException("La Factura no puede ser null.");
 
-        if (!await base.Exists(cd => cd.IdFactura == entity.IdFactura))
+        if (await base.Exists(cd => cd.IdFactura == entity.IdFactura))
             throw new FacturaException("La Factura ya existe");
 
         await base.Save(entity);
@@ -37,8 +37,8 @@ public class FacturaRepository : BaseRepository<Factura>, IFacturaRepository
     
     public async Task<List<FacturaPedidoModel>> GetFactura()
     {
-        var factura = _context.Facturas
-            .Join(_context.Pedidos,
+        var factura = _context.Factura
+            .Join(_context.Pedido,
                 fac => fac.IdPedido,
                 ped => ped.IdPedido,
                 (fac, ped) => fac.ConvertFacturaEntityToFacturaPedidoModel(ped))
@@ -49,9 +49,9 @@ public class FacturaRepository : BaseRepository<Factura>, IFacturaRepository
 
     public async Task<List<FacturaPedidoModel>> GetFacturaByPedido(int idPedido)
     {
-        var factura = _context.Facturas
+        var factura = _context.Factura
             .Where(fac => fac.IdPedido == idPedido)
-            .Join(_context.Pedidos,
+            .Join(_context.Pedido,
                 fac => fac.IdPedido,
                 ped => ped.IdPedido,
                 (fac, ped) => fac.ConvertFacturaEntityToFacturaPedidoModel(ped))

@@ -29,14 +29,14 @@ public class MesaRepository : BaseRepository<Mesa>, IMesaRepository
         if (entity is null)
             throw new ArgumentNullException(("La mesa no puede ser null."));
 
-        if (!await base.Exists(cd => cd.IdMesa == entity.IdMesa))
+        if (await base.Exists(cd => cd.IdMesa == entity.IdMesa))
             throw new MesaException("La mesa ya existe.");
 
         await base.Save(entity);
     }
     public async Task<List<MesaModel>> GetMesa()
     {
-        var mesa = _context.Mesas
+        var mesa = _context.Mesa
             .Select(mes => mes.ConvertMesaEntityToMesaModel())
             .ToListAsync();
 
