@@ -4,6 +4,7 @@ using Restaurante.Domain.Entities;
 using Restaurante.Domain.Interfaces;
 using Restaurante.API.Extentions;
 using Restaurante.Domain.Models;
+using Restaurante.Infrastructure.Extentions;
 
 namespace Restaurante.API.Controllers
 {
@@ -42,13 +43,13 @@ namespace Restaurante.API.Controllers
 
         // GET api/<ClienteController>/5
         [HttpGet("{id}")]
-        public async Task<IActionResult> Get(int id)
+        public async Task<IActionResult> GetById(int id)
         {
             var responseApi = new ResponseAPI<Cliente>();
 
             try
             {
-                var cliente = _clienteRepository.Get(id);
+                var cliente = _clienteRepository.GetById(id);
                 
                 responseApi.Success = true;
                 responseApi.Data = await cliente;
@@ -93,15 +94,14 @@ namespace Restaurante.API.Controllers
 
             try
             {
-                var exists = await _clienteRepository.Exists(cd => cd.IdCliente == id);
-                
-                if (!exists)
+                if (!await _clienteRepository.Exists(cd => cd.IdCliente == id))
                 {
                     responseApi.Success = false;
                     responseApi.Message = $"Cliente with Id {id} not found.";
+                    
                     return Ok(responseApi);
                 }
-                
+
                 var cliente = clienteViewModel.ConvertToEntityCliente();
                 
                 await _clienteRepository.Update(cliente);
@@ -115,12 +115,6 @@ namespace Restaurante.API.Controllers
             }
 
             return Ok(responseApi);
-        }
-
-        // DELETE api/<ClienteController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
         }
     }
 }
