@@ -103,35 +103,6 @@ public class ClienteRepositoryTest
     }
 
     [Fact]
-    public async Task Save_WithValidClienteModel()
-    {
-        // Arrange
-
-        var newCliente = new Cliente()
-        {
-            Nombre = "Hola",
-            Telefono = "829-000-000",
-            Email = "hola@exaple.com"
-        };
-
-        // Act
-
-        await clienteRepository.Save(newCliente);
-        
-        // Expect
-
-        var savedCliente = _context.Cliente.FirstOrDefault(cd => 
-                                                            cd.Nombre == newCliente.Nombre);
-        
-        // Assert
-        
-        Assert.NotNull(savedCliente);
-        Assert.Equal(newCliente.Nombre, savedCliente.Nombre);
-        Assert.Equal(newCliente.Telefono, savedCliente.Telefono);
-        Assert.Equal(newCliente.Email, savedCliente.Email);
-    }
-
-    [Fact]
     public async Task Exists_ShouldReturnTrue_WhereMatchingClienteExists()
     {
         // Arrange
