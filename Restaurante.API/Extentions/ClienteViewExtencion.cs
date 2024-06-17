@@ -17,16 +17,4 @@ public static class ClienteViewExtencion
 
         return cliente;
     }
-
-    public static Cliente ConvertToEntityCliente(this ClienteUpdateModel clienteUpdateModel)
-    {
-        Cliente cliente = new Cliente()
-        {
-            Nombre = clienteUpdateModel.Nombre,
-            Telefono = clienteUpdateModel.Telefono,
-            Email = clienteUpdateModel.Email
-        };
-
-        return cliente;
-    }
 }

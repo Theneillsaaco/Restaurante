@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Restaurante.Infrastructure.Unit.Test")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a76a2f20c9dc888ab80fc33283cf8a8739b76824")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8bb2d2e7e7d5f7cfc94539bc4ad668e5892578fe")]
 [assembly: System.Reflection.AssemblyProductAttribute("Restaurante.Infrastructure.Unit.Test")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Restaurante.Infrastructure.Unit.Test")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

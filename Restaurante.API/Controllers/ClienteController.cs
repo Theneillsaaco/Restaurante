@@ -3,8 +3,8 @@ using Restaurante.API.Models.ClienteModels;
 using Restaurante.Domain.Entities;
 using Restaurante.Domain.Interfaces;
 using Restaurante.API.Extentions;
+using Restaurante.API.Models.MesaModels;
 using Restaurante.Domain.Models;
-using Restaurante.Infrastructure.Extentions;
 
 namespace Restaurante.API.Controllers
 {
@@ -65,9 +65,9 @@ namespace Restaurante.API.Controllers
 
         // POST api/<ClienteController>
         [HttpPost]
-        public async Task<IActionResult> Save([FromBody] ClienteUpdateModel clienteUpdateModel)
+        public async Task<IActionResult> Save([FromBody] ClienteViewModel clienteUpdateModel)
         {
-            var responseApi = new ResponseAPI<ClienteUpdateModel>();
+            var responseApi = new ResponseAPI<ClienteViewModel>();
 
             try
             {
