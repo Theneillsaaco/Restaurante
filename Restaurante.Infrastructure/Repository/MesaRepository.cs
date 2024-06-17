@@ -22,6 +22,19 @@ public class MesaRepository : BaseRepository<Mesa>, IMesaRepository
     
     #endregion
 
+    public override async Task<Mesa> GetById(int id)
+    {
+        ArgumentNullException.ThrowIfNull(id, "El Id no puede ser null.");
+
+        if (id == null)
+            throw new ArgumentNullException("El id no puede ser null.");
+
+        if (!await base.Exists(cd => cd.IdMesa == id))
+            throw new MesaException("La mesa no existe");
+        
+        return await base.GetById(id);
+    }
+    
     public override async Task Save(Mesa entity)
     {
         ArgumentNullException.ThrowIfNull(entity, "La mesa no puede ser null.");
@@ -34,6 +47,20 @@ public class MesaRepository : BaseRepository<Mesa>, IMesaRepository
 
         await base.Save(entity);
     }
+
+    public override async Task Update(Mesa entity)
+    {
+        ArgumentNullException.ThrowIfNull(entity, "La mesa no puede ser null.");
+
+        if (entity is null)
+            throw new ArgumentNullException("La Mesa no puede ser null.");
+
+        if (!await base.Exists(cd => cd.IdMesa != entity.IdMesa))
+            throw new MesaException("La mesa no existe");
+
+        await base.Update(entity);
+    }
+    
     public async Task<List<MesaModel>> GetMesa()
     {
         var mesa = _context.Mesa

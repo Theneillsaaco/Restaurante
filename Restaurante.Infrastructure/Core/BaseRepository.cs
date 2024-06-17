@@ -29,7 +29,7 @@ public abstract class BaseRepository<TEntity> : IBaseRepository<TEntity> where T
         return await _entities.Where(filter).ToListAsync();
     }
 
-    public virtual async Task<TEntity> Get(int id)
+    public virtual async Task<TEntity> GetById(int id)
     {
         return await _entities.FindAsync(id);
     }

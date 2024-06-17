@@ -6,7 +6,7 @@ namespace Restaurante.Domain.Core.Interfaces
     {
         Task<List<TEntity>> GetAll(Expression<Func<TEntity, bool>> filter);
 
-        Task<TEntity> Get(int id);
+        Task<TEntity> GetById(int id);
 
         Task Save(TEntity entity);
 
