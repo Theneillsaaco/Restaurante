@@ -7,7 +7,7 @@ public static class ClienteViewExtencion
 {
     public static Cliente ConvertToEntityCliente(this ClienteViewModel clienteViewModel)
     {
-        Cliente cliente = new Cliente()
+        Cliente cliente = new Cliente
         {
             IdCliente = clienteViewModel.IdCliente,
             Nombre = clienteViewModel.Nombre,

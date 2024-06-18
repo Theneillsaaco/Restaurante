@@ -3,7 +3,6 @@ using Restaurante.API.Models.ClienteModels;
 using Restaurante.Domain.Entities;
 using Restaurante.Domain.Interfaces;
 using Restaurante.API.Extentions;
-using Restaurante.API.Models.MesaModels;
 using Restaurante.Domain.Models;
 
 namespace Restaurante.API.Controllers
@@ -12,12 +11,15 @@ namespace Restaurante.API.Controllers
     [ApiController]
     public class ClienteController : ControllerBase
     {
+        #region Context
         private readonly IClienteRepository _clienteRepository;
-
+        
         public ClienteController(IClienteRepository clienteRepository)
         {
             _clienteRepository = clienteRepository;
         }
+
+        #endregion
         
         // GET: api/<ClienteController>
         [HttpGet]

@@ -22,17 +22,39 @@ public class MenuRepository : BaseRepository<Menu>, IMenuRepository
 
     #endregion
 
+    public override async Task<Menu> GetById(int id)
+    {
+        ArgumentNullException.ThrowIfNull(id, "El id no puede ser null.");
+
+        if (id == null)
+            throw new ArgumentNullException("El id no puede ser null.");
+
+        if (!await base.Exists(cd => cd.IdPlato == id))
+            throw new MenuException("El Plato no existe.");
+
+        return await base.GetById(id);
+    }
     public override async Task Save(Menu entity)
     {
-        ArgumentNullException.ThrowIfNull(entity, "El Menu no Puede ser null.");
+        ArgumentNullException.ThrowIfNull(entity, "El Plato no Puede ser null.");
 
         if (entity is null)
-            throw new ArgumentNullException("El Menu no puede ser null.");
+            throw new ArgumentNullException("El Plato no puede ser null.");
 
         if (await base.Exists(cd => cd.IdPlato == entity.IdPlato))
-            throw new MenuException("El Menu ya existe");
+            throw new MenuException("El Plato ya existe.");
 
         await base.Save(entity);
+    }
+
+    public override async Task Update(Menu entity)
+    {
+        ArgumentNullException.ThrowIfNull(entity, "El plato no puede ser null.");
+
+        if (entity is null)
+            throw new ArgumentNullException("El Plato no puede ser null.");
+
+        await base.Update(entity);
     }
     
     public async Task<List<MenuModel>> GetMenus()
